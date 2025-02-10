@@ -100,4 +100,6 @@ inputs:
       summary: "The code sign style."
       description: |
         CODE_SIGN_STYLE e.g.: Manual or Automatic
+      is_expand: true
       is_required: true
+      value_options: ["Automatic", "Manual"]

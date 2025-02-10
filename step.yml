@@ -60,10 +60,11 @@ toolkit:
 inputs:
   - pbxproj_path:
     opts:
-      title: ".pbxproj file path"
+      title: "Xcode project file path"
       summary: ""
       description: |
-        Path to the iOS .pbxproj file.
+        Path to the xcode project.
+      is_expand: true
       is_required: true
   - target_name:
     opts:
@@ -71,6 +72,7 @@ inputs:
       summary: ""
       description: |
         The target project.
+      is_expand: true
       is_required: true
   - build_configuration:
     opts:
@@ -78,6 +80,7 @@ inputs:
       summary: "Set the build_configuration in the .pbxproj file to a specified value. Should be a string."
       description: |
         build_configuration : Debug
+      is_expand: true
       is_required: true
   - code_sign_identity:
     opts:
@@ -86,6 +89,7 @@ inputs:
       description: |
         CODE_SIGN_IDENTITY e.g.: iPhone Distribution
       value: "iPhone Distribution"
+      is_expand: true
       is_required: true
   - provisioning_profile_specifier:
     opts:
@@ -93,6 +97,7 @@ inputs:
       summary: "The new provisioning profile to use."
       description: |
         PROVISIONING_PROFILE_SPECIFIER e.g.: MyProvisioningProfileName
+      is_expand: true
       is_required: true
   - code_sign_style:
     opts:

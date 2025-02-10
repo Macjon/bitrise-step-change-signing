@@ -1,7 +1,5 @@
 #!/bin/bash
-set -ex
-
-echo Path "$(pwd)"
+set -e
 
 if [ -z "${pbxproj_path}" ] ; then
   echo " [!] Missing required input: pbxproj_path"

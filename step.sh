@@ -47,5 +47,6 @@ echo " (i) Provided code sign style: ${code_sign_style}"
 # Install xcodeproj if not available
 gem install xcodeproj
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Run Ruby script with custom step variables
-ruby ./update_signing.rb "${pbxproj_path}" "${target_name}" "${build_configuration}" "${code_sign_identity}" "${provisioning_profile_specifier}" "${code_sign_style}"
+ruby $CURRENT_DIR/update_signing.rb "${pbxproj_path}" "${target_name}" "${build_configuration}" "${code_sign_identity}" "${provisioning_profile_specifier}" "${code_sign_style}"

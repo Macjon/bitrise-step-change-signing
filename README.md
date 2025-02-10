@@ -1,4 +1,4 @@
-# Set iOS version
+# Change signing variables in .pbxproj file
 
 With this step you can change the following values for a specific target and build configuration:
 

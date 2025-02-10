@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+echo Path "$(pwd)"
+
 if [ -z "${pbxproj_path}" ] ; then
   echo " [!] Missing required input: pbxproj_path"
   echo " [!] Exiting..."
@@ -37,12 +39,12 @@ if [ -z "${code_sign_style}" ] ; then
   exit 1
 fi
 
-echo " (i) 🔧 Provided pbxproj path: ${pbxproj_path}"
-echo " (i) 📦 Provided target: ${target_name}"
-echo " (i) ⚙️ Provided build configuration : ${build_configuration}"
-echo " (i) 🔑 Provided code sign identity: ${code_sign_identity}"
-echo " (i) 📜 Provided provisioning profile: ${provisioning_profile_specifier}"
-echo " (i) Provided code sign style: ${code_sign_style}"
+echo " 🔧 Provided pbxproj path: ${pbxproj_path}"
+echo " 📦 Provided target: ${target_name}"
+echo " ⚙️ Provided build configuration : ${build_configuration}"
+echo " 🔑 Provided code sign identity: ${code_sign_identity}"
+echo " 📜 Provided provisioning profile: ${provisioning_profile_specifier}"
+echo "    Provided code sign style: ${code_sign_style}"
 
 # Install xcodeproj if not available
 gem install xcodeproj

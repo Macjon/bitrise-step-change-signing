@@ -8,11 +8,6 @@ if [ -z "${pbxproj_path}" ] ; then
   echo " [!] Exiting..."
   exit 1
 fi
-if [ ! -f "${pbxproj_path}" ] ; then
-  echo " [!] File project.pbxproj doesn't exist at specified path: ${pbxproj_path}"
-  echo " [!] Exiting..."
-  exit 1
-fi
 
 if [ -z "${target_name}" ] ; then
   echo " [!] No target specified!"
